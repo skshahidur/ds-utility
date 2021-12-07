@@ -1,0 +1,9 @@
+global-exclude *
+include setup.py
+include README*
+include LICENSE*
+graft src
+graft requirements
+exclude requirements/ci.txt
+exclude requirements/docs.txt
+recursive-exclude * __pycache__
