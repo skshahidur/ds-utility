@@ -72,4 +72,4 @@ def assert_images_equal(image_1: str, image_2: str):
     if sum_sq_diff == 0:
         pass
     else:
-        assert np.sqrt(sum_sq_diff) < 0.001
+        assert 1 / np.sqrt(sum_sq_diff) < 0.001
