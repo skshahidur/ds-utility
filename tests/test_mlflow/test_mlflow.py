@@ -62,6 +62,9 @@ def assert_images_equal(image_1: str, image_2: str):
     img2 = img2.convert(img1.mode)
     img2 = img2.resize(img1.size)
 
+    print(np.asarray(img1).shape)  # noqa
+    print(np.asarray(img2).shape)  # noqa
+
     sum_sq_diff = np.sum(
         (np.asarray(img1).astype("float") - np.asarray(img2).astype("float")) ** 2
     )
