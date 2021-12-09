@@ -17,7 +17,7 @@ def read_requirements(path):
 
 
 extras_require = {
-    "mlflow": ["mlflow"],
+    "mlflow": ["scikit-learn", "mlflow"],
     "plot": ["matplotlib"],
 }
 
