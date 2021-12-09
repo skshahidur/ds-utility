@@ -31,6 +31,7 @@ setup(
     setup_requires=["setuptools_scm"],
     install_requires=read_requirements(requirements_path),
     extras_require=extras_require,
+    download_url="https://github.com/skshahidur/ds-utility/archive/refs/tags/0.1.0.tar.gz",  # TODO: check usage for CD
     keywords=["DSUTILS", "DSUTILITIES", "DATASCIENCEUTILITY", "DATASCIENCEUTILITIES"],
     use_scm_version={
         "version_scheme": "guess-next-dev",
