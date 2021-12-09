@@ -32,4 +32,11 @@ def classification_report_mlflow(
     report = classification_report(y_true, y_pred, output_dict=True)
     report = pd.DataFrame(report).T
     report_styled = report.style.background_gradient()
-    dfi.export(report_styled, path)
+    try:
+        dfi.export(report_styled, path)
+    except OSError:
+        logger.warning(
+            "Color gradient is deactivated as chrome is not found.",
+            issue="https://github.com/dexplo/dataframe_image/issues/9",
+        )
+        dfi.export(report_styled, path, table_conversion="matplot")
