@@ -1,3 +1,4 @@
+import os
 import pathlib
 from typing import Sequence, Union
 
@@ -17,10 +18,10 @@ def classification_report_mlflow(
 ):
     """Get an image output for sklearn classification_report."""
     if not path:
-        path = str(pathlib.Path(__file__).parent.resolve()) + "/" + file_name
+        path = str(os.getcwd()) + "/" + file_name
     else:
         path = str(path) + file_name
-    logger.info("The image is saved at ", location=path)
+    logger.info("The plot is saved at ", location=path)
     report = classification_report(y_true, y_pred, output_dict=True)
     report = pd.DataFrame(report).T
     report_styled = report.style.background_gradient()
