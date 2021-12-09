@@ -2,3 +2,4 @@ detect-secrets~=1.1.0
 mypy~=0.9
 pre-commit~=2.6.0
 pytest~=6.2.5
+numpy~=1.21.4
