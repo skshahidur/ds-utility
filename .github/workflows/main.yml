@@ -49,7 +49,6 @@ jobs:
         pip install --upgrade pip setuptools wheel
         pip install -r requirements/ci.txt
         pip install codecov
-        pip install ds_utility
 
     - name: Lint
       run: make lint
