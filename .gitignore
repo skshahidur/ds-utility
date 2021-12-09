@@ -92,3 +92,5 @@ classification_report.png
 
 # setuptools_scm
 _repo_version.py
+
+.pytest_cache
