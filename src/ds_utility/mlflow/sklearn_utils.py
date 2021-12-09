@@ -16,7 +16,14 @@ def classification_report_mlflow(
     path: Union[str, pathlib.Path] = None,
     file_name: str = "classification_report.png",
 ):
-    """Get an image output for sklearn classification_report."""
+    """Get an image output for sklearn classification_report.
+
+    Arguments:
+        y_true: True labels for a classification task.
+        y_pred: Predicted labels for a classification task.
+        path: Location for output image e.g. /Users/<your_name>/Downloads/
+        file_name: Name of the output iamge
+    """
     if not path:
         path = str(os.getcwd()) + "/" + file_name
     else:

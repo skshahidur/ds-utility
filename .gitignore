@@ -77,6 +77,8 @@ target/
 
 # exclude data from source control by default
 /data/
+/tests/assets/observed/
+classification_report.png
 
 # Mac OS-specific storage files
 .DS_Store
