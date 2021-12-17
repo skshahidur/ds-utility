@@ -17,6 +17,45 @@ classification_report_mlflow(real, pred)
 ```
 ![classification_report](https://github.com/skshahidur/ds-utility/blob/e872a71ef92f7f72b12e74de2773be6c3a95151b/tests/assets/expected/classification_report.png)
 
+### os utils
+
+#
+#### mkdir, cp, and rm equivalent
+
+```python
+from ds_utility.os_utils import os_mkdir_p, os_cp, os_rm
+
+# Create a new directory at the current location.
+new_dir = "my_new_dir"
+os_mkdir_p(new_dir)
+
+# Create a new directory at the destination.
+os_cp(new_dir, "my_new_dir_dest/abc/def/")
+
+# Remove the full directory recursively
+os_rm(new_dir)
+os_rm("my_new_dir_dest/")
+
+# OR delete each folder one at a time
+
+os_rm("my_new_dir_dest/abc/def/")
+os_rm("my_new_dir_dest/abc/")
+os_rm("my_new_dir_dest/")
+```
+
+### typing utils
+
+#
+
+#### typing utils which doesn't come out of the box
+
+```python
+from ds_utility.typing_utils import PathType
+from typing import NoReturn
+
+def use_pathtype(path: PathType) -> NoReturn:
+    pass
+```
 
 ### License
 
